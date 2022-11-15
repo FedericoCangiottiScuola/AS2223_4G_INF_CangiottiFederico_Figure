@@ -4,6 +4,89 @@
              x:Class="AS2223_4G_INF_CangiottiFederico_Figure.MainPage">
 
     <ScrollView>
-    </ScrollView>
+        <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+            <HorizontalStackLayout Margin="10">
+                <Label
+                    Text="Figura"
+                    />
+                <Picker x:Name="cmbFigure">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>quadrato</x:String>
+                            <x:String>rettangolo</x:String>
+                            <x:String>cerchio</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
 
+            <HorizontalStackLayout Margin="10">
+                <Label
+                    x:Name="lblLato"
+                    Text="Inserisci il lato:"
+                    IsVisible="False"
+                    />
+                <Entry
+                    x:Name="txtLato"
+                    IsVisible="False"
+                    />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="10">
+                <Label
+                    x:Name="lblBase"
+                    Text="Inserisci la base:"
+                    IsVisible="False"
+                    />
+                <Entry
+                    x:Name="txtBase"
+                    IsVisible="False"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="10">
+                <Label
+                    x:Name="lblAltezza"
+                    Text="Inserisci l'altezza:"
+                    IsVisible="False"
+                    />
+                <Entry
+                    x:Name="txtAltezza"
+                    IsVisible="False"
+                    />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="10">
+                <Label
+                    x:Name="lblRaggio"
+                    Text="Inserisci il raggio:"
+                    IsVisible="False"
+                    />
+                <Entry
+                    x:Name="txtRaggio"
+                    IsVisible="False"
+                    />
+            </HorizontalStackLayout>
+
+            <Button
+                x:Name="btnVisualizza"
+                Text="Visualizza"
+                Margin="30"
+                Padding="5 10"
+                />
+
+            <Label
+                Text="Perimetro:"
+                />
+            <Label
+                Text="..."
+                />
+            <Label
+                Text="Area:"
+                />
+            <Label
+                Text="..."
+                />
+
+        </FlexLayout>
+    </ScrollView>
 </ContentPage>
