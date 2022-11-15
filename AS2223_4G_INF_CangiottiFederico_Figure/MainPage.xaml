@@ -9,7 +9,7 @@
                 <Label
                     Text="Figura"
                     />
-                <Picker x:Name="cmbFigure">
+                <Picker x:Name="cmbFigure" SelectedIndexChanged="cmbFigure_SelectedIndexChanged">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>quadrato</x:String>
@@ -71,7 +71,7 @@
                 x:Name="btnVisualizza"
                 Text="Visualizza"
                 Margin="30"
-                Padding="5 10"
+                Padding="5"
                 />
 
             <Label
