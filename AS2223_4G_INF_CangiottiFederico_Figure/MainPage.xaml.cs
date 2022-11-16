@@ -79,6 +79,8 @@ public partial class MainPage : ContentPage
 
     void CalcolaCerchio()
     {
-
+        Cerchio c = new Cerchio(Convert.ToDouble(txtRaggio.Text));
+        lblPerimetro.Text = c.Perimetro().ToString();
+        lblArea.Text = c.Area().ToString();
     }
 }
