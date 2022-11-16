@@ -1,18 +1,23 @@
-﻿namespace AS2223_4G_INF_CangiottiFederico_Figure;
+﻿using System.Collections.ObjectModel;
+namespace AS2223_4G_INF_CangiottiFederico_Figure;
 
 public partial class MainPage : ContentPage
 {
 	public MainPage()
 	{
 		InitializeComponent();
+        lstRisultati.ItemsSource = dsFigure;
 	}
+
+    public class Item
+    {
+        public string PerimetroArea { get; set; }
+        public string Figura { get; set; }
+    }
+    ObservableCollection<Item> dsFigure = new ObservableCollection<Item>();
 
     private void cmbFigure_SelectedIndexChanged(object sender, EventArgs e)
     {
-        lblPerimetro.Text = "...";
-        lblArea.Text = "...";
-        lblFigura.Text = "...";
-
         switch (cmbFigure.SelectedItem)
 		{
 			case "quadrato":
@@ -70,24 +75,36 @@ public partial class MainPage : ContentPage
     void CalcolaQuadrato()
     {
         Quadrato q = new Quadrato(Convert.ToDouble(txtLato.Text));
-        lblPerimetro.Text = q.Perimetro().ToString();
-        lblArea.Text = q.Area().ToString();
-        lblFigura.Text = q.NomeFigura;
+        dsFigure.Add(
+                new Item()
+                {
+                    PerimetroArea = $"{q.Perimetro()} - {q.Area()}",
+                    Figura = $"{q.NomeFigura}"
+                }
+            );
     }
 
     void CalcolaRettangolo()
     {
         Rettangolo r = new Rettangolo(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtAltezza.Text));
-        lblPerimetro.Text = r.Perimetro().ToString();
-        lblArea.Text = r.Area().ToString();
-        lblFigura.Text = r.NomeFigura;
+        dsFigure.Add(
+                new Item()
+                {
+                    PerimetroArea = $"{r.Perimetro()} - {r.Area()}",
+                    Figura = $"{r.NomeFigura}"
+                }
+            );
     }
 
     void CalcolaCerchio()
     {
         Cerchio c = new Cerchio(Convert.ToDouble(txtRaggio.Text));
-        lblPerimetro.Text = c.Perimetro().ToString();
-        lblArea.Text = c.Area().ToString();
-        lblFigura.Text = c.NomeFigura;
+        dsFigure.Add(
+                new Item()
+                {
+                    PerimetroArea = $"{c.Perimetro()} - {c.Area()}",
+                    Figura = $"{c.NomeFigura}"
+                }
+            );
     }
 }

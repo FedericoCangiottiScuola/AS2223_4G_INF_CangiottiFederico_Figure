@@ -4,7 +4,7 @@
              x:Class="AS2223_4G_INF_CangiottiFederico_Figure.MainPage">
 
     <ScrollView>
-        <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+        <VerticalStackLayout>
             <HorizontalStackLayout Margin="10">
                 <Label
                     Text="Figura"
@@ -76,27 +76,21 @@
                 />
 
             <Label
-                Text="Figura:"
-                />
-            <Label
-                x:Name="lblFigura"
-                Text="..."
-                />
-            <Label
-                Text="Perimetro:"
-                />
-            <Label
-                x:Name="lblPerimetro"
-                Text="..."
-                />
-            <Label
-                Text="Area:"
-                />
-            <Label
-                x:Name="lblArea"
-                Text="..."
+                Text="Perimetro - Area:"
+                FontSize="16"
+                Padding="10"
                 />
 
-        </FlexLayout>
+            <ListView x:Name="lstRisultati" ItemsSource="{Binding dsFigure}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell
+                            Text="{Binding PerimetroArea}"
+                            Detail="{Binding Figura}"
+                            />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
