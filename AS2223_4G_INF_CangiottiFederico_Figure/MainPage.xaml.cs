@@ -49,6 +49,34 @@ public partial class MainPage : ContentPage
 
     private void btnVisualizza_Clicked(object sender, EventArgs e)
     {
+        switch (cmbFigure.SelectedItem)
+        {
+            case "quadrato":
+                CalcolaQuadrato();
+                break;
+            case "rettangolo":
+                CalcolaRettangolo();
+                break;
+            case "cerchio":
+                CalcolaCerchio();
+                break;
+        }
+    }
+
+    void CalcolaQuadrato()
+    {
+        Quadrato q = new Quadrato(Convert.ToDouble(txtLato.Text));
+        lblPerimetro.Text = q.Perimetro().ToString();
+        lblArea.Text = q.Area().ToString();
+    }
+
+    void CalcolaRettangolo()
+    {
+
+    }
+
+    void CalcolaCerchio()
+    {
 
     }
 }
