@@ -11,6 +11,7 @@ public partial class MainPage : ContentPage
     {
         lblPerimetro.Text = "...";
         lblArea.Text = "...";
+        lblFigura.Text = "...";
 
         switch (cmbFigure.SelectedItem)
 		{
@@ -71,6 +72,7 @@ public partial class MainPage : ContentPage
         Quadrato q = new Quadrato(Convert.ToDouble(txtLato.Text));
         lblPerimetro.Text = q.Perimetro().ToString();
         lblArea.Text = q.Area().ToString();
+        lblFigura.Text = q.NomeFigura;
     }
 
     void CalcolaRettangolo()
@@ -78,6 +80,7 @@ public partial class MainPage : ContentPage
         Rettangolo r = new Rettangolo(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtAltezza.Text));
         lblPerimetro.Text = r.Perimetro().ToString();
         lblArea.Text = r.Area().ToString();
+        lblFigura.Text = r.NomeFigura;
     }
 
     void CalcolaCerchio()
@@ -85,5 +88,6 @@ public partial class MainPage : ContentPage
         Cerchio c = new Cerchio(Convert.ToDouble(txtRaggio.Text));
         lblPerimetro.Text = c.Perimetro().ToString();
         lblArea.Text = c.Area().ToString();
+        lblFigura.Text = c.NomeFigura;
     }
 }

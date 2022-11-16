@@ -26,5 +26,10 @@ namespace AS2223_4G_INF_CangiottiFederico_Figure
         {
             return lato * lato;
         }
+
+        public string NomeFigura
+        {
+            get { return nome; }
+        }
     }
 }

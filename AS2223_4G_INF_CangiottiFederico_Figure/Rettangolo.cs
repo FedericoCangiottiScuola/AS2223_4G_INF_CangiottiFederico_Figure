@@ -28,5 +28,10 @@ namespace AS2223_4G_INF_CangiottiFederico_Figure
         {
             return b * altezza;
         }
+
+        public string NomeFigura
+        {
+            get { return nome; }
+        }
     }
 }
