@@ -79,12 +79,14 @@
                 Text="Perimetro:"
                 />
             <Label
+                x:Name="lblPerimetro"
                 Text="..."
                 />
             <Label
                 Text="Area:"
                 />
             <Label
+                x:Name="lblArea"
                 Text="..."
                 />
 
