@@ -9,7 +9,10 @@ public partial class MainPage : ContentPage
 
     private void cmbFigure_SelectedIndexChanged(object sender, EventArgs e)
     {
-		switch (cmbFigure.SelectedItem)
+        lblPerimetro.Text = "...";
+        lblArea.Text = "...";
+
+        switch (cmbFigure.SelectedItem)
 		{
 			case "quadrato":
                 lblBase.IsVisible= false;
