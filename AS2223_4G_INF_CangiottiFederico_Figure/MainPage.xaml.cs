@@ -72,7 +72,9 @@ public partial class MainPage : ContentPage
 
     void CalcolaRettangolo()
     {
-
+        Rettangolo r = new Rettangolo(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtAltezza.Text));
+        lblPerimetro.Text = r.Perimetro().ToString();
+        lblArea.Text = r.Area().ToString();
     }
 
     void CalcolaCerchio()
