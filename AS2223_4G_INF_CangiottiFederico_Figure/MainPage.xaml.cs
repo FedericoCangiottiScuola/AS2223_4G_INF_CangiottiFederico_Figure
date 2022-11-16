@@ -46,4 +46,9 @@ public partial class MainPage : ContentPage
                 break;
         }
     }
+
+    private void btnVisualizza_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

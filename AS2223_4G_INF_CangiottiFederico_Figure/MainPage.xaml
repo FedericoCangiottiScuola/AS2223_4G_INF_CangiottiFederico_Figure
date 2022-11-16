@@ -69,6 +69,7 @@
 
             <Button
                 x:Name="btnVisualizza"
+                Clicked="btnVisualizza_Clicked"
                 Text="Visualizza"
                 Margin="30"
                 Padding="5"
